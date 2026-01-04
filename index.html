@@ -1,12 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>VALORANT エージェント紹介</title>
+    <style>
+        :root {
+            --valorant-red: #ff4655;
+            --valorant-dark: #0f1923;
+            --valorant-white: #ece8e1;
+        }
+
+        body {
+            font-family: 'DIN Next W1G', 'Meiryo', sans-serif;
+            background-color: var(--valorant-dark);
+            color: var(--valorant-white);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--valorant-red);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* エージェントカード */
+        .agent-card {
+            background-color: #1f2933;
+            border-left: 5px solid var(--valorant-red);
+            margin-bottom: 30px;
+            padding: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .agent-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .agent-name {
+            font-size: 2rem;
+            color: var(--valorant-red);
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .role {
+            display: inline-block;
+            background: #333;
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* アビリティ一覧 */
+        .abilities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .ability {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .ability-key {
+            color: var(--valorant-red);
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .ability-name {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ability-desc {
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is my first GitHub Pages deployment!</p>
+
+<header>
+    <h1>Agents List</h1>
+</header>
+
+<div class="container">
+
+    <!-- ジェット -->
+    <div class="agent-card">
+        <div class="agent-info">
+            <div class="agent-name">JETT (ジェット)</div>
+            <div class="role">デュエリスト</div>
+            <p>韓国出身のジェットは、機敏で回避能力に長けた戦闘スタイルが特徴。敵を翻弄し、一瞬で隙を突く戦いを得意とする。</p>
+            
+            <div class="abilities">
+                <div class="ability">
+                    <span class="ability-key">Q - アップドラフト</span>
+                    <span class="ability-name">上昇</span>
+                    <span class="ability-desc">瞬時に空中へ高く飛び上がる。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">E - テイルウィンド</span>
+                    <span class="ability-name">ダッシュ</span>
+                    <span class="ability-desc">進行方向に素早く移動する。キルを取ると再使用可能。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">C - クラウドバースト</span>
+                    <span class="ability-name">スモーク</span>
+                    <span class="ability-desc">視界を遮る煙の塊を投げる。弾道は曲げられる。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">X - ブレードストーム</span>
+                    <span class="ability-name">アルティメット</span>
+                    <span class="ability-desc">正確無比な投げナイフを装備する。ヘッドショットで即死。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- セージ -->
+    <div class="agent-card">
+        <div class="agent-info">
+            <div class="agent-name">SAGE (セージ)</div>
+            <div class="role">センチネル</div>
+            <p>中国出身のセージは、仲間の安全を確保する守りの要。回復や蘇生、壁による進行妨害でチームを勝利に導く。</p>
+            
+            <div class="abilities">
+                <div class="ability">
+                    <span class="ability-key">Q - スロウオーブ</span>
+                    <span class="ability-name">鈍足化</span>
+                    <span class="ability-desc">地面に触れると広がるオーブを投げ、範囲内の敵の足を遅くする。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">E - ヒーリングオーブ</span>
+                    <span class="ability-name">回復</span>
+                    <span class="ability-desc">自分または味方のHPを継続的に回復させる。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">C - バリアオーブ</span>
+                    <span class="ability-name">壁生成</span>
+                    <span class="ability-desc">分厚く強固な氷の壁を作り出す。</span>
+                </div>
+                <div class="ability">
+                    <span class="ability-key">X - リザレクション</span>
+                    <span class="ability-name">アルティメット</span>
+                    <span class="ability-desc">倒れた味方をフルHPで蘇生させる。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
+
